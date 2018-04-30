@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/007arunwilson/nodeJs-jwt-rest-api/issues"
   },
-  "homepage": "https://github.com/007arunwilson/nodeJs-jwt-rest-api#readme"
+  "homepage": "https://github.com/007arunwilson/nodeJs-jwt-rest-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16"
+  }
 }
