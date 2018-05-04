@@ -1,9 +1,12 @@
 const portCheck = require('./utilities/portCheck.js');
 
-const portNumber = 3009;
+const portNumber = 3000;
 portCheck(portNumber)
   .then(portNumberParam => console.log(`Port ${portNumberParam} is available`))
-  .catch(error => console.log(`Port not available due to ${error.errno}`));
+  .catch((error) => {
+    console.log(`Port not available due to ${error.errno}`);
+    process.exit();
+  });
 // const express = require('express');
 // const bodyParser = require('body-parser');
 
