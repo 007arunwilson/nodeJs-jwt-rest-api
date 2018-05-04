@@ -1,27 +1,33 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const portCheck = require('./utilities/portCheck.js');
 
-const Console = {
-  new: console,
-  protottype: console,
-};
+const portNumber = 3009;
+portCheck(portNumber)
+  .then(portNumberParam => console.log(`Port ${portNumberParam} is available`))
+  .catch(error => console.log(`Port not available due to ${error.errno}`));
+// const express = require('express');
+// const bodyParser = require('body-parser');
 
-// create express app
-const app = express();
+// const Console = {
+//   new: console,
+//   protottype: console,
+// };
 
-// parse requests of content-type - application/x-www-formurlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+// // create express app
+// const app = express();
 
-// parse requests of content-type - application/json
-app.use(bodyParser.json());
+// // parse requests of content-type - application/x-www-formurlencoded
+// app.use(bodyParser.urlencoded({ extended: true }));
 
-
-// define a dirst & simple route
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to cyberinfoscripter application.' });
-});
+// // parse requests of content-type - application/json
+// app.use(bodyParser.json());
 
 
-app.listen(3000, () => {
-  Console.new.log('App listening in port 3000');
-});
+// // define a dirst & simple route
+// app.get('/', (req, res) => {
+//   res.json({ message: 'Welcome to cyberinfoscripter application.' });
+// });
+
+
+// app.listen(3009, () => {
+//   Console.new.log('App listening in port 3009');
+// });
