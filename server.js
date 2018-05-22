@@ -1,7 +1,7 @@
 const express = require('express');
 const portCheck = require('./utilities/portCheck.js');
 
-const appPortNumber = 3000;
+const appPortNumber = 3006;
 
 const Console = {
   new: console,
