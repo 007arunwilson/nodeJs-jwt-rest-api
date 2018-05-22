@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
+Console.new.log(process.env);
 
 // define a dirst & simple route
 app.get('/', (req, res) => {
